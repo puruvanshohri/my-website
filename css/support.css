@@ -1,0 +1,285 @@
+.gallery {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  background: #fff;
+}
+
+.gallery .galleryContainer {
+  width: 700px;
+  margin: 100px auto;
+}
+
+.gallery img {
+  transition: 1s;
+  width: 300px;
+  margin: 1px;
+  padding: 0;
+  display: inline;
+  align-self: start;
+}
+
+.gallery img:hover {
+  filter: grayscale(100%);
+  transform: scale(1.2);
+}
+
+.workExperience, .academics, .references, .interests, .contact {
+  flex: none;
+  margin-top: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  background: #C0E3E7;
+  color: #041F28;
+}
+
+.academics {
+  background: #fff;
+  color: #fff;
+}
+
+.workExperience .container, .academics .container, .references .container, .interests .container, .contact .container {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.pointer {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  background: #fff;
+  transform: scale(0.75);
+  transition: 1s;
+}
+
+.academics .pointer {
+  background: #041F28;
+}
+
+.references .pointer {
+  background: #C0E3E7;
+}
+
+.pointer:hover {
+  transform: scale(0.9);
+}
+
+.pointer:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #C0E3E7;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+.academics .pointer:after {
+  border-left: 20px solid #fff;
+}
+
+.pointer:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #fff;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+.academics .pointer:before {
+  border-left: 20px solid #041F28;
+}
+
+.references span {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.references span img {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  align-self: center;
+  filter: grayscale(70%);
+}
+
+.workExperience h2, .academics h2, .references h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.workExperience i, .academics i, .contact i {
+  transition: 1s;
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+.contact i{
+  margin-top: 0;
+}
+
+.workExperience i:hover, .academics i:hover, .contact i:hover {
+  transform: scale(1.2);
+}
+
+.workExperience h3, .academics h3, .references h3 {
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.workExperience p, .academics p, .references p {
+  margin: 10px 0;
+  font-size: 15px;
+  font-weight: lighter;
+  /* text-transform: uppercase; */
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.references p {
+  text-align: left;
+}
+
+.workBox {
+  position: relative;
+  padding: 20px;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  width: 400px;
+  border-left: solid 2px #041F28;
+  background: #fff;
+  border-top-right-radius: 10px;
+  color: #041F28;
+}
+
+.academics .workBox {
+  background: #C0E3E7;
+}
+
+.dot {
+  position: absolute;
+  top: 15px;
+  left: -6px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #041F28;
+}
+
+.interests figure {
+  margin-top: 20px;
+  position: relative;
+}
+
+.interests figure img {
+  transition: 1s;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.interests figure img:hover {
+  transform: scale(1.1);
+}
+
+.interests figure figcaption {
+  position: absolute;
+  top: 0;
+  right: -80px;
+  background: #041F28;
+  padding: 5px;
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.9);
+  width: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.contact a, .acknowledgement figcaption{
+  transition: 1s;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 50;
+  padding: 20px;
+  text-transform: uppercase;
+  background: #041F28;
+  margin-top: 20px;
+  transform: scale(0.75);
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.contact a span, .acknowledgement figcaption span{
+  font-size: 20px;
+}
+
+.contact a:hover{
+  color: #041F28;
+  background: #fff;
+}
+
+form{
+  color: #041F28;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+form input[type=text], textarea {
+  width: 300px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  resize: vertical;
+  margin-right: 20px;
+}
+
+form label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+form input[type=submit] {
+  background-color: #041F28;
+  color: white;
+  padding: 12px 20px;
+  border: solid 1px #041F28;
+  border-radius: 2px;
+  cursor: pointer;
+  float: right;
+  transition: 1s;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+form input[type=submit]:hover {
+  color: #041F28;
+  background-color: #fff;
+  border: solid 1px #041F28;
+}
+
+.acknowledgement figure{
+  margin-top: 100px;
+}
